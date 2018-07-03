@@ -8,8 +8,9 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\index.js"
+            //"program": "${workspaceFolder}\\index.js"
             //"program": "${workspaceFolder}\\bin\\populate_db.js"
+            "program": "${workspaceFolder}\\mysql-exercise.js"
         }
     ]
 }
