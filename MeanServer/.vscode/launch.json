@@ -11,6 +11,7 @@
             "program": "${workspaceFolder}\\express-index.js" // mongoose, express routes
             //"program": "${workspaceFolder}\\index.js" // mongoose, no express
             //"program": "${workspaceFolder}\\bin\\populate_db.js"
+            //"program": "${workspaceFolder}\\hapi-index.js"
             //"program": "${workspaceFolder}\\mysql-exercise.js"
             //"program": "${workspaceFolder}\\express-exercise.js"
         }

@@ -27,7 +27,7 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', employeesRouter);
+app.use(employeesRouter);
 app.use(teamsRouter);
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
