@@ -24,7 +24,10 @@ app.config(['$routeProvider', function($routeProvider) {
 
 app.factory('EmployeeService', ['$resource', function($resource) {
     return $resource('/employees/:employeeId', {}, {
-        update: {method: 'PUT'}
+        update: {method: 'PUT'},
+
+        get: { isArray: true },
+        post: { method: 'POST', isArray: false},
     });
 }]);
 
