@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>The jQuery Example</title>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="./jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./jquery/custom.js"></script>
+    <script type="text/javascript">
+    /*
+         $(document).ready(function() {
+            //document.write("Hello, from jQuery sample!");
+            $("div").click(function() {
+                alert("Hello, you clicker!");
+            });
+        }); 
+    */
+    </script> 
+    <link rel="stylesheet" type="text/css" href="./css/custom.css"/>
+    <style>
+      .selected { color: red; }
+      .highlight { background: yellow; }
+    </style>
+</head>
+<body>
+<h1>Hello there!</h1>
+<p class="myclass">This is the first paragraph with some <span>RED</span> text.</p>
+<p>This is the second paragraph with some <span>RED</span> text.</p>
+<div id="clickMe" class="flashit">
+    Click on this to see a dialog box.
+</div>
+<p id="myid" custom="CustAttr">A yellow background paragraph</p>
+<em title="Bold and Brave">A bold and brave paragraph</em>
+<div>
+    <ul>
+        <li class="top">List 1</li>
+        <li class="top">List 2</li>
+        <li class="mid">List 3</li>
+        <li class="mid">List 4</li>
+        <li class="bot">List 5</li>
+        <li class="bot">List 6</li>
+    </ul>
+</div>
+<p></p>
+<div class="box2">Blue Square</div>
+<div class="box2">Red Square</div>
+<div class="box2">Red Square</div>
+<div class="box2">Red Square</div>
+<div class="box2">Red Square</div>
+<p></p>
+<p>Click on a square. <span id="click_result">RED</span></p>
+
+<p style="clear: left">Click below to remove:</p>
+<div class="removeMe" style="background-color:blue;">&nbsp;</div>
+<div class="removeMe" style="background-color:greenyellow;">&nbsp;</div>
+<div class="removeMe" style="background-color:orangered;">&nbsp;</div>
+
+<p>Click below to insert:</p>
+<div class="insertOne">&nbsp;</div>
+
+<p>Click below to Load /jquery/load_result.html:</p>
+<input type="button" id="loadButton" value="Load Data" />
+<input type="button" id="loadJsonButton" value="Load JSon Data" />
+<div id="loadResult" style="background-color: chocolate">&nbsp;</div>
+
+</body>
+</html>
