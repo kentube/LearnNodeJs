@@ -15,7 +15,7 @@
             React.DOM.h1({
                     id: "my-h1-head", className: "pretty", htmlFor: "me",
                     style: { background: "black", color: "yellow", fontFamily: "Verdana", }
-            }, "Hello react World!"), document.getElementById("app1"));
+            }, "Hello my React World!"), document.getElementById("app1"));
 
         var component = React.createClass({
             propTypes: { name: React.PropTypes.string.isRequired, },
@@ -31,13 +31,13 @@
 
         var textAreaConter = React.createClass({
             propTypes: { text: React.PropTypes.string, },
-//            getDefaultProps : function() { return { text: '', }; },
+            // getDefaultProps : function() { return { text: '', }; },
             getInitialState: function() { return { text: this.props.text, }; },
             _textChange: function(ev) { this.setState({ text: ev.target.value, }); },
             render: function() {
                 return React.DOM.div(null, 
                     React.DOM.textarea({ 
-//                        defaultValue: this.props.text, 
+                        // defaultValue: this.props.text, 
                         value: this.state.text,
                         onChange: this._textChange,
                     }), 
