@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello React</title>    <meta charset="utf-8">
+    <title>My React</title>    <meta charset="utf-8">
 </head>
 <body>
     <div id="app1"></div>
     <div id="app2"></div>
     <div id="app3"></div>
     <div id="app4"></div>
-    <script src="react-v15.6.2/react.js"></script>
-    <script src="react-v15.6.2/react-dom.js"></script>
+    <script src="reactbook/react.js"></script>
+    <script src="reactbook/react-dom.js"></script>
     <script>
         ReactDOM.render(
-            React.DOM.h1({
+            React.DOM.h1(
+                {
                     id: "my-h1-head", className: "pretty", htmlFor: "me",
                     style: { background: "black", color: "yellow", fontFamily: "Verdana", }
-            }, "Hello my React World!"), document.getElementById("app1"));
+                },
+                "Hello react World!"),
+            document.getElementById("app1"));
 
         var component = React.createClass({
             propTypes: { name: React.PropTypes.string.isRequired, },
@@ -23,7 +26,8 @@
                 return React.DOM.span(null, 
                     "I'm so custom, " + this.props.name);}});
         ReactDOM.render(
-            React.createElement(component, { name: "Bob" }), document.getElementById("app2"));
+            React.createElement(component, { name: "Bob" }), 
+            document.getElementById("app2"));
 
         var componentFactory = React.createFactory(component);
         ReactDOM.render(
@@ -41,7 +45,10 @@
                         value: this.state.text,
                         onChange: this._textChange,
                     }), 
-                    React.DOM.h3(null, this.state.text.length));}});
+                    React.DOM.h3(null, this.state.text.length)
+                );
+            }
+        });
         ReactDOM.render(
             React.createElement(textAreaConter, { text: "TextArea1" }), document.getElementById("app4"));
     </script>
