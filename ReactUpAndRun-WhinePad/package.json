@@ -45,8 +45,8 @@
         "babel-preset-react": "^6.24.1",
         "browserify": "^16.2.3",
         "classnames": "^2.2.6",
+        "jest-cli": "^23.6.0",
         "react": "^16.7.0",
-        "react-addons-test-utils": "^15.6.2",
         "react-dom": "^16.7.0"
     }
 }
