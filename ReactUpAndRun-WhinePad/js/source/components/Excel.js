@@ -30,8 +30,8 @@ class Excel extends Component {
         const descending = this.state.sortby === key && !this.state.descending;
         data.sort(function (a, b) {
             return descending
-                ? (a[column] < b[column] ? 1 : -1)
-                : (a[column] > b[column] ? 1 : -1);
+                ? (a[key] < b[key] ? 1 : -1)
+                : (a[key] > b[key] ? 1 : -1);
         });
         this.setState({
             data: data,
@@ -45,7 +45,7 @@ class Excel extends Component {
             edit: {
                 row: parseInt(e.target.dataset.row, 10),
                 key: e.target.dataset.key,
-            }
+            },
         });
     }
     _save(e) {

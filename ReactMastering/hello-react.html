@@ -3,29 +3,74 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Hello React Go</title>
-    <script src="react-v15.6.2/react-with-addons.js"></script>
-    <script src="react-v15.6.2/react-dom.js"></script>
+    <script src="react-v0.14.7/react.js"></script>
+    <script src="react-v0.14.7/react-dom.js"></script>
+    <script src="./JSXTransformer-0.13.1.js"></script>
 </head>
 <body>
-    <script>
-        /*
+    <div id="app0"></div>
+    <div id="app1"></div>
+    <div id="app2"></div>
+    <div id="app3"></div>
+    <script type="text/jsx">
         var HelloReact = React.createClass({
             render: function() {
-                return React.DOM.h1(null, 'Hello React 15.6.2');
+                return React.DOM.h1(null, 'Hello React kid');
             }
         });
-        ReactDOM.render(
-            React.createElement(HelloReact), 
-            document.body);
-            */
+        ReactDOM.render(React.createElement(HelloReact), document.getElementById('app0'));
+
+        var HelloReact1 = React.createClass({
+            render: function () {
+                return <h1>Hello React for JSX</h1>;
+            }
+        });
+        ReactDOM.render(<HelloReact1 />, document.getElementById('app1'));
+
         var HelloReact2 = React.createClass({
+            propTypes: {
+                mesg: React.PropTypes.string,
+                nbr: React.PropTypes.number,
+                requiredString: React.PropTypes.string.isRequired
+            },
+            getDefaultProps: function() {
+                return {
+                    message: 'I am from default'
+                };
+            },
             render: function() {
-                return <h1>Hello React</h1>;
+                return (
+                    <div>
+                        <div>Hello React 2</div>
+                        <div>{this.props.mesg + ' and cool JSX'}</div>
+                    </div>
+                );
             }
         });
-        ReactDOM.render(
-            <HelloReact />, 
-            document.body);
+        ReactDOM.render(<HelloReact2 mesg='Message thru property' nbr='nan' />, document.getElementById('app2'));
+
+        var HelloReact3 = React.createClass({
+            getInitialState: function() {
+                return {
+                    message: 'I am from default state'
+                };
+            },
+            updateMessage: function(e) {
+                this.setState({message: e.target.value});
+            },
+            render: function() {
+                return (
+                    <div>
+                    <hr />
+                    <input type='text' onChange={this.updateMessage}/>
+                    <div>Hello React 3</div>
+                    <div>{this.state.message}</div>
+                    </div>
+                );
+            }
+        });
+        ReactDOM.render(<HelloReact3 />, document.getElementById('app3'));
+
     </script>
 </body>
 </html>

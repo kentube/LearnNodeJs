@@ -167,7 +167,7 @@ var Excel0 = createReactClass({
                   var content = cell;
                   var edit = this.state.edit;
                   if (edit && edit.row === rowidx && edit.cell === idx) {
-                    var content = (
+                    var content2 = (
                       <form onSubmit={this._save}>
                         <input type="text" defaultValue={cell} />
                       </form>
@@ -181,7 +181,7 @@ var Excel0 = createReactClass({
         </tbody>
       </table>
     );
-  }
+  },
 });
 
 export default Excel0

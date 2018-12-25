@@ -8,7 +8,8 @@
         ]
     },
     "scripts": {
-        "watch": "watch \"sh scripts/build.sh\" js/source js/__tests__ css/"
+        "watch": "watch \"sh scripts/build.sh\" js/source js/__tests__ css/",
+        "test": "jest"
     },
     "eslintConfig": {
         "parser": "babel-eslint",
@@ -22,6 +23,7 @@
             "jest": true
         },
         "rules": {
+            "no-unused-vars": 0,
             "comma-dangle": [
                 2,
                 "always-multiline"
@@ -29,7 +31,7 @@
             "react/jsx-uses-react": 1
         }
     },
-    "jest": {
+    "jest00": {
         "scriptPreprocessor": "node_modules/babel-jest",
         "unmockedModulePathPatterns": [
             "node_modules/react",
@@ -48,5 +50,6 @@
         "jest-cli": "^23.6.0",
         "react": "^16.7.0",
         "react-dom": "^16.7.0"
-    }
+    },
+    "dependencies": {}
 }
